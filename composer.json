@@ -1,0 +1,45 @@
+{
+  "type": "library",
+  "name": "phpwdk/think-library",
+  "license": "MIT",
+  "homepage": "",
+  "description": "ThinkPHP v6.0 Development Library",
+  "authors": [
+    {
+      "name": "phpwdk",
+      "email": "383174124@qq.com"
+    }
+  ],
+  "support": {
+    "email": "383174124@qq.com",
+    "wiki": "",
+    "forum": "",
+    "source": "https://gitee.com/phpwdk/think-library",
+    "issues": "https://gitee.com/phpwdk/think-library/issues"
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-gd": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-iconv": "*",
+    "ext-openssl": "*",
+    "ext-mbstring": "*",
+    "topthink/framework": "^6.0"
+  },
+  "autoload": {
+    "files": [
+      "src/common.php"
+    ],
+    "psr-4": {
+      "think\\simple\\": "src"
+    }
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "think\\simple\\Library"
+      ]
+    }
+  }
+}
