@@ -18,7 +18,7 @@ use think\middleware\LoadLangPack;
 use think\middleware\SessionInit;
 use think\Request;
 use think\Service;
-//use function Composer\Autoload\includeFile;
+use function Composer\Autoload\includeFile;
 
 /**
  * 模块注册服务
@@ -79,8 +79,8 @@ class Library extends Service
         $this->app->lang->load(__DIR__ . '/lang/en-us.php', 'en-us');
 
         // 动态加载应用初始化系统函数
-        //[$ds, $base] = [DIRECTORY_SEPARATOR, $this->app->getBasePath()];
-        //foreach (glob("{$base}*{$ds}sys.php") as $file) includeFile($file);
+        [$ds, $base] = [DIRECTORY_SEPARATOR, $this->app->getBasePath()];
+        foreach (glob("{$base}*{$ds}sys.php") as $file) includeFile($file);
 
         // 终端 HTTP 访问时特殊处理
         if (!$this->app->request->isCli()) {

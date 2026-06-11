@@ -240,10 +240,9 @@ class Controller extends stdClass
      *
      * @param Model|BaseQuery|string $dbQuery
      * @param string                 $template 模板名称
-     * @param string                 $key      指定数据主键
+     * @param string                 $field    指定数据对象主键
      * @param mixed                  $where    额外更新条件
      * @param array                  $data     表单扩展数据
-     * @param string                 $field    禁止返回字段
      * @param bool                   $refresh  是否刷新数据
      *
      * @return array|boolean
@@ -251,9 +250,9 @@ class Controller extends stdClass
      * @throws \think\db\exception\DbException
      * @throws \think\db\exception\ModelNotFoundException
      */
-    protected function _form($dbQuery, string $template = '', string $key = '', string $field = '', $where = [], array $data = [], bool $refresh = true)
+    protected function _form($dbQuery, string $template = '', string $field = '', $where = [], array $data = [], bool $refresh = true)
     {
-        return FormHelper::instance()->init($dbQuery, $template, $key, $where, $data, $field, $refresh);
+        return FormHelper::instance()->init($dbQuery, $template, $field, $where, $data, $refresh);
     }
 
     /**

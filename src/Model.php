@@ -21,11 +21,11 @@ use think\Container;
  * @method void onAdminUpdate(string $ids) 记录更新数据日志
  * @method void onAdminInsert(string $ids) 记录新增数据日志
  * @method void onAdminDelete(string $ids) 记录删除数据日志
- * @method bool mSave(array $data = [], string $field = '', mixed $where = []) static 快捷更新逻辑器
+ * @method bool mSave(array $edata = [], string $field = '', mixed $where = []) static 快捷更新逻辑器
  * @method bool|null mDelete(string $field = '', mixed $where = []) static 快捷删除逻辑器
- * @method bool|array mForm(string $template = '', string $key = '', mixed $where = [], array $data = [], string $field = '*', bool $refresh = true) static 快捷表单逻辑器
+ * @method bool|array mForm(string $template = '', string $key = '', mixed $where = [], array $edata = [], string $field = '*', bool $refresh = true) static 快捷表单逻辑器
  * @method QueryHelper mQuery($input = null, callable $callable = null) static 快捷查询逻辑器
- * @method bool|integer mUpdate(array $data = [], string $field = '', mixed $where = []) static 快捷保存逻辑器
+ * @method bool|integer mUpdate(array $data = [], string $key = '', mixed $map = []) static 快捷保存逻辑器
  */
 abstract class Model extends \think\Model
 {

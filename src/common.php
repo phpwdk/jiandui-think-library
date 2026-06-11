@@ -371,9 +371,10 @@ if (!function_exists('down_file')) {
      *
      * @return string
      */
-    function down_file(string $source, bool $force = false, int $expire = 0): string
+    function down_file(string $source, bool $force = true, int $expire = 0): string
     {
-        return Storage::down($source, $force, $expire)['url'] ?? $source;
+        $content = Storage::down($source, $force, $expire);
+        return $content['url'] ?? $source;
     }
 }
 if (!function_exists('format_bytes')) {

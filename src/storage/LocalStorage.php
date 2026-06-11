@@ -65,11 +65,13 @@ class LocalStorage extends Storage
     {
         try {
             $path = $this->path($name, $safe);
+            // p([$path, $name, $safe]);
             file_exists(dirname($path)) || mkdir(dirname($path), 0755, true);
             if (file_put_contents($path, $file)) {
                 return $this->info($name, $safe, $attname);
             }
         } catch (Exception $exception) {
+            p(['LocalStorage-set', $exception->getMessage()]);
         }
         return [];
     }
