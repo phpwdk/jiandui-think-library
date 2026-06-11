@@ -1,6 +1,6 @@
 {
   "type": "library",
-  "name": "phpwdk/think-library",
+  "name": "phpwdk/jiandui-think-library",
   "license": "MIT",
   "homepage": "",
   "description": "ThinkPHP v6.0 Development Library",
@@ -10,13 +10,7 @@
       "email": "383174124@qq.com"
     }
   ],
-  "support": {
-    "email": "383174124@qq.com",
-    "wiki": "",
-    "forum": "",
-    "source": "https://gitee.com/phpwdk/think-library",
-    "issues": "https://gitee.com/phpwdk/think-library/issues"
-  },
+  "support": {},
   "require": {
     "php": ">=8.0",
     "ext-gd": "*",
