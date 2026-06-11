@@ -58,7 +58,7 @@ class FormHelper extends Helper
         if ($this->app->request->isPost()) {
             $edata = array_merge($this->app->request->post(), $edata);
             if (false !== $this->class->callback('_form_filter', $edata, $where)) {
-                $result = SystemService::instance()->save($query, $edata, $key, $where) !== false;
+                $result = SystemService::instance()->save($query, $edata, $key, $where);
                 if (false !== $this->class->callback('_form_result', $result, $edata)) {
                     if ($result !== false) {
                         $this->class->success(lang('think_library_form_success'), '{-null-}', $refresh ? 1 : 200);
